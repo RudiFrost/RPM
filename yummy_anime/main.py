@@ -51,9 +51,9 @@ def anime_comment(url):
     time.sleep(3)
     text = "блин, вот бы вернуться в 2003 и посмотреть его заново"
 
-    exem = driver.find_element(By.CSS_SELECTOR, "#comments_ifr")
+    formochka = driver.find_element(By.CSS_SELECTOR, "#comments_ifr")
     time.sleep(2)
-    driver.switch_to.frame(exem)
+    driver.switch_to.frame(formochka)
     time.sleep(2)
 
     required_field = driver.find_element("xpath", "/html/body/p")

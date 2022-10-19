@@ -1,0 +1,51 @@
+h1 {
+   color: #ff0000
+}
+
+form.login_form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+    background-color: #ffd700;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+body {
+        background: #1A1B20;
+    }
+    .navbar-custom {
+        background-color: #26272c;
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: #c2c2c4 !important;
+    }
+    .btn-primary, .btn-primary:active, .btn-primary:visited {
+        color: #c2c2c4 !important;
+        background-color: #26272c !important;
+        border-color: #26272c !important;
+    }
+    .btn-primary:hover {
+        color: #ffffff !important;
+        background-color: #d42c2f !important;
+        border-color: #333438 !important;
+    }
+    .btn-primary:active {
+        background-color: #d42c2f !important;
+        border-color: #d42c2f !important;
+    }
+    .form-control{
+            color: #ffffff;
+            background-color: #25262e;
+            border-color: #25262e;
+
+        }
+
+        .form-control:active, .form-control:focus{
+            color: #ffffff;
+            background-color: #32333e;
+            border-color: #494a57;
+            box-shadow: 0px 0px transparent;
+        }
+

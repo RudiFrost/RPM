@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1><font color="#ffffff">Записи в блоге</font></h1>
+{% for item in news%}
+<div class="col-md6 rounded">
+    <h2> <font color="#ffffff">{{item.title}}</font></h2>
+    <div>
+        <font color="#ffffff">{{item.content}}</font>
+    </div>
+    <p>
+        <font color="#ffffff">Автор - {{item.user.name}}, Дата написания - {{item.created_date}}    </font>
+    </p>
+    {% if current_user.is_authenticated and current_user == item.user %}
+    <div>
+        <a href="/news/{{ item.id }}" class="btn btn-secondary">
+            <font color="#ffffff">Изменить</font>
+        </a>
+        <a href="/news_delete/{{ item.id }}" class="btn btn-secondary">
+            <font color="#ffffff">Удалить</font>
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endfor %}
+{% if current_user.is_authenticated %}
+<a href="news" class="btn btn-primary"><font color="#ffffff">Добавить новость</font></a>
+{% endif %}
+{% endblock %}

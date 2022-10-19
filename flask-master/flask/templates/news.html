@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>
+    <font color="#ffffff">Добавление новости</font>
+</h1>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        <font color="#ffffff">{{ form.title.label }}</font>
+        <br>
+        {{ form.title(class="form-control") }}
+        <br>
+        {% for error in form.title.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p>
+    <p>
+        <font color="#ffffff">{{ form.content.label }}</font><br>
+        {{ form.content(class="form-control") }}<br>
+        {% for error in form.content.errors %}
+    <p content="alert alert-danger" role="alert">
+        {{ error }}
+    </p>
+    {% endfor %}
+    </p>
+    <p>{{ form.is_private() }} <font color="#ffffff">{{ form.is_private.label }}</font></p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    {{message}}
+</form>
+{% endblock %}
